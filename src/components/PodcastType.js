@@ -6,6 +6,7 @@ class PodcastType extends Component {
 
 		return(
 			<div className="MealTypeForm">
+				<h2>TEST: SHOWING PODCAST PAGE</h2>
 			</div>
 		);
 	}

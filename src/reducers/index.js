@@ -10,6 +10,11 @@ export default function(state=INITIAL_STATE, action) {
 				audioType: action.audiotype,
 				currentComponent: "music_genre_list"
 			});
+		case "SHOW_PODCAST_LIST":
+			return Object.assign({}, state, {
+				audioType: action.audiotype,
+				currentComponent: "podcast_list"
+			});
 		default:
 			return state;
 	}
