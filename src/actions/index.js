@@ -11,3 +11,10 @@ export function showPodcastList(audiotype) {
 		audiotype
 	}
 }
+
+export function showSongs(musicGenre) {
+	return {
+		type: "SHOW_SONGS",
+		musicGenre
+	}
+}

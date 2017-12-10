@@ -1,6 +1,7 @@
 const INITIAL_STATE = {
 	audioType: "",
-	currentComponent: "audio_type"
+	currentComponent: "audio_type",
+	musicGenre: ""
 }
 
 export default function(state=INITIAL_STATE, action) {
@@ -14,6 +15,10 @@ export default function(state=INITIAL_STATE, action) {
 			return Object.assign({}, state, {
 				audioType: action.audiotype,
 				currentComponent: "podcast_list"
+			});
+		case "SHOW_SONGS":
+			return Object.assign({}, state, {
+				musicGenre: action.musicGenre
 			});
 		default:
 			return state;
