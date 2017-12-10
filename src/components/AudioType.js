@@ -10,8 +10,8 @@ class AudioType extends Component {
 			<div className="MealTypeForm" >
 				<h1>Do you want to listen to music?</h1>
 				<ul className="MealTypes">
-					<li><button type="button" value="music" onClick={this.handleInputChange.bind(this)}>Yes</button></li>
-					<li><button type="button" value="podcast" onClick={this.handleInputChange.bind(this)}>No, but I want to listen to a podcast.</button></li>
+					<li><button type="button" className="btn btn-success" value="music" onClick={this.handleInputChange.bind(this)}>Yes</button></li>
+					<li><button type="button" className="btn btn-danger" value="podcast" onClick={this.handleInputChange.bind(this)}>No</button></li>
 				</ul>
 			</div>
 		);

@@ -10,10 +10,10 @@ class MusicGenre extends Component {
 			<div className="MealTypeForm">
 				<h2>What kind of music do you want to listen to?</h2>
 				<ul className="MusicGenres">
-					<li><button type="button" value="pop" onClick={this.handleInputChange.bind(this)}>Pop</button></li>
-					<li><button type="button" value="country" onClick={this.handleInputChange.bind(this)}>Country</button></li>
-					<li><button type="button" value="rap" onClick={this.handleInputChange.bind(this)}>Rap</button></li>
-					<li><button type="button" value="alternative" onClick={this.handleInputChange.bind(this)}>Alternative</button></li>
+					<li><button type="button" className="btn btn-info" value="pop" onClick={this.handleInputChange.bind(this)}>Pop</button></li>
+					<li><button type="button" className="btn btn-info" value="country" onClick={this.handleInputChange.bind(this)}>Country</button></li>
+					<li><button type="button" className="btn btn-info" value="rap" onClick={this.handleInputChange.bind(this)}>Rap</button></li>
+					<li><button type="button" className="btn btn-info" value="alternative" onClick={this.handleInputChange.bind(this)}>Alternative</button></li>
 				</ul>
 			</div>
 		);

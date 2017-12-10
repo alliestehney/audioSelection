@@ -1,20 +1,55 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(119,136,153);
+}
+
+h1 {
+	font-weight: 500;
+	font-size: 2.5rem;
 }
 
 .MealTypeForm {
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(255,255,255,1);
 	width: 50%;
-	margin: auto;
+	margin: 5% auto;
 	text-align: center;
+	padding: 6% 3%;
+	-webkit-box-shadow: 10px 10px 31px -13px rgba(119,136,153,0.78);
+	-moz-box-shadow: 10px 10px 31px -13px rgba(119,136,153,0.78);
+	box-shadow: 10px 10px 31px -13px rgba(119,136,153,0.78);
 }
 
 .MealTypes {
 	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	padding-left: 0;
+	padding-top: 5%;
+}
+
+.MealTypes button {
+	padding: 15% 30%;
+	border: none;
+	outline: none;
+	border-radius: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 1.5rem;
+}
+
+.MealTypes button:hover {
+	cursor: pointer;
 }
 
 .MusicGenres {
 	list-style-type: none;
+	display: flex;
+	justify-content: space-evenly;
+	outline: none;
+}
+
+.MusicGenres button:hover {
+	cursor: pointer;
 }
