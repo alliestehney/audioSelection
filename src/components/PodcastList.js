@@ -10,8 +10,9 @@ class PodcastList extends Component {
 		return(
 			<div>
 				<h2 className="ListHeading">Try out these podcasts!</h2>
-				<button onClick={this.handlePrevious.bind(this)}>Go Back</button>
-				<ul>
+				<button className="BackBtn" onClick={this.handlePrevious.bind(this)}>Go Back</button>
+				<button className="HomeBtn" onClick={this.handleGoHome.bind(this)}>Home</button>
+				<ul className="PodcastList">
 					{this.props.playlists.map(podcast => 
 						<PodcastCard key={podcast.trackId} podcast={podcast} />
 					)}
@@ -23,6 +24,11 @@ class PodcastList extends Component {
 	handlePrevious(event) {
 		event.preventDefault();
 		this.props.prev("podcast_list");
+	}
+
+	handleGoHome(event) {
+		event.preventDefault();
+		this.props.prev("audio_type");
 	}
 }
 

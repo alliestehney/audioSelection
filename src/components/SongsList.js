@@ -10,7 +10,8 @@ class SongsList extends Component {
 		return(
 			<div>
 				<h2 className="ListHeading">Check out these songs:</h2>
-				<button onClick={this.handlePrevious.bind(this)}>Go Back</button>
+				<button className="BackBtn" onClick={this.handlePrevious.bind(this)}>Go Back</button>
+				<button className="HomeBtn" onClick={this.handleGoHome.bind(this)}>Home</button>
 				<ul className="Wrapper">
 					{this.props.songs.map(song => 
 						<Song key={song.trackId} song={song} />
@@ -23,6 +24,11 @@ class SongsList extends Component {
 	handlePrevious(event) {
 		event.preventDefault();
 		this.props.prev("music_genre_list");
+	}
+
+	handleGoHome(event) {
+		event.preventDefault();
+		this.props.prev("audio_type");
 	}
 }
 

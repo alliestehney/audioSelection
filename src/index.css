@@ -94,3 +94,29 @@ h1 {
 .PodcastTypes button:hover {
 	cursor: pointer;
 }
+
+.PodcastCard {
+	background-color: white;
+	text-align: center;
+	margin: 2%;
+}
+
+.PodcastCard .Title a {
+	color: rgba(0,0,0,0.7);
+}
+
+.PodcastList {
+	margin-top: 4%;
+	margin-left: 6%;
+	display: grid;
+	grid-template-columns: 30% 30% 30%;
+}
+
+.BackBtn {
+	margin-left: 42%;
+	margin-right: 2%;
+}
+
+.HomeBtn:hover, .BackBtn:hover {
+	cursor: pointer;
+}
