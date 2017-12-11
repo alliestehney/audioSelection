@@ -1,7 +1,10 @@
+import {fetchSongs} from '../actions';
+
 const INITIAL_STATE = {
 	audioType: "",
 	currentComponent: "audio_type",
-	musicGenre: ""
+	musicGenre: "",
+	songs: []
 }
 
 export default function(state=INITIAL_STATE, action) {
@@ -19,6 +22,19 @@ export default function(state=INITIAL_STATE, action) {
 		case "SHOW_SONGS":
 			return Object.assign({}, state, {
 				musicGenre: action.musicGenre
+			});
+		case "REQUEST_SONGS":
+			return Object.assign({}, state, {
+				musicGenre: action.musicGenre
+			});
+		case "RECEIVE_SONGS":
+			console.log("IN RECEIVE SONGS");
+			return Object.assign({}, state, {
+				songs: action.songs
+			});
+		case "PREV":
+			return Object.assign({}, state, {
+				currentComponent: action.currentComponent
 			});
 		default:
 			return state;

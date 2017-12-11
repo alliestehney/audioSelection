@@ -6,8 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { createLogger } from 'redux-logger';
-import reducer from './reducers'
-// import { fetchPosts } from './actions';
+import reducer from './reducers';
 import thunkMiddleware from 'redux-thunk';
 
 const store = createStore(

@@ -9,7 +9,7 @@ class App extends Component {
 
   	if (this.props.currentComponent === "audio_type") {
   		return (
-  			<AudioType onClick={this.props.showMusicGenre}/>
+  			<AudioType />
   		);
   	} else if (this.props.currentComponent === "music_genre_list") {
   		return (

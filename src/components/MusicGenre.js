@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { showSongs } from '../actions';
+import { prev, fetchSongs, showSongs,receiveSongs } from '../actions';
 
 class MusicGenre extends Component {
 
@@ -15,20 +15,27 @@ class MusicGenre extends Component {
 					<li><button type="button" className="btn btn-info" value="rap" onClick={this.handleInputChange.bind(this)}>Rap</button></li>
 					<li><button type="button" className="btn btn-info" value="alternative" onClick={this.handleInputChange.bind(this)}>Alternative</button></li>
 				</ul>
+				<button onClick={this.handlePrevious.bind(this)}>Previous</button>
 			</div>
 		);
 	}
 
 	handleInputChange(event) {
 		event.preventDefault();
-		this.props.showSongs(event.target.value);
+		this.props.fetchSongs(event.target.value)
+	}
 
+	handlePrevious(event) {
+		event.preventDefault();
+		this.props.prev("audio_type")
 	}
 
 }
 
 const mapActionsToProps = {
-	showSongs
+	fetchSongs,
+	receiveSongs,
+	prev
 }
 
 export default connect(null, mapActionsToProps)(MusicGenre);
