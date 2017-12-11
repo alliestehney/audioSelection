@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PodcastCard from './PodcastCard';
+import { prev } from '../actions';
 
 class PodcastList extends Component {
 
@@ -9,6 +10,7 @@ class PodcastList extends Component {
 		return(
 			<div>
 				<h2 className="ListHeading">Try out these podcasts!</h2>
+				<button onClick={this.handlePrevious.bind(this)}>Go Back</button>
 				<ul>
 					{this.props.playlists.map(podcast => 
 						<PodcastCard key={podcast.trackId} podcast={podcast} />
@@ -16,6 +18,11 @@ class PodcastList extends Component {
 				</ul>
 			</div>
 		);
+	}
+
+	handlePrevious(event) {
+		event.preventDefault();
+		this.props.prev("podcast_list");
 	}
 }
 
@@ -25,4 +32,8 @@ function mapStateToProps(state) {
 	}
 }
 
-export default connect(mapStateToProps)(PodcastList);
+const mapActionsToProps = {
+	prev
+}
+
+export default connect(mapStateToProps, mapActionsToProps)(PodcastList);

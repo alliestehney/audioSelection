@@ -8,15 +8,15 @@ class PodcastType extends Component {
 
 		return(
 			<div className="MealTypeForm">
-				<h2>TEST: SHOWING PODCAST PAGE</h2>
+				<p className="points">TOTAL POINTS: 1</p>
 				<h3>Select one category that interests you the most.</h3>
-				<ul>
-					<li><button type="button" value="sports" onClick={this.handleInputChange.bind(this)}>Sports</button></li>
-					<li><button type="button" value="current+events" onClick={this.handleInputChange.bind(this)}>Current Events</button></li>
-					<li><button type="button" value="history" onClick={this.handleInputChange.bind(this)}>History</button></li>
-					<li><button type="button" value="entrepreneurship" onClick={this.handleInputChange.bind(this)}>Entrepreneurship</button></li>
+				<ul className="PodcastTypes">
+					<li><button type="button" className="btn btn-info" value="sports" onClick={this.handleInputChange.bind(this)}>Sports</button></li>
+					<li><button type="button" className="btn btn-info" value="current+events" onClick={this.handleInputChange.bind(this)}>Current Events</button></li>
+					<li><button type="button" className="btn btn-info" value="history" onClick={this.handleInputChange.bind(this)}>History</button></li>
+					<li><button type="button" className="btn btn-info" value="entrepreneurship" onClick={this.handleInputChange.bind(this)}>Entrepreneurship</button></li>
 				</ul>
-				<button onClick={this.handlePrevious.bind(this)}>Previous</button>
+				<button className="GoBack" onClick={this.handlePrevious.bind(this)}>Go Back</button>
 			</div>
 		);
 	}

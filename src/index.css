@@ -80,3 +80,17 @@ h1 {
 	color: white;
 	font-weight: 300;
 }
+
+.GoBack:hover {
+	cursor: pointer;
+}
+
+.PodcastTypes {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.PodcastTypes button:hover {
+	cursor: pointer;
+}
