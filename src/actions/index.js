@@ -62,6 +62,23 @@ export function fetchSongs(musicGenre, callback) {
 	}
 }
 
+export function fetchPlaylists(playlistType) {
+	return function(dispatch, getState) {
+		dispatch(requestPlaylists(playlistType));
+
+		const state = getState();
+		var type = state.playlistType;
+
+		var url = "https://itunes.apple.com/search?entity=podcast&term=this+american+life";
+
+		$.getJSON(url, function(data) {
+			const playlists = data.results;
+			console.log(data);
+			dispatch(receivePlaylists(playlists));
+		});
+	}
+}
+
 export function requestSongs(musicGenre) {
 	return {
 		type: "REQUEST_SONGS",
@@ -73,5 +90,19 @@ export function receiveSongs(songs) {
 	return {
 		type: "RECEIVE_SONGS",
 		songs
+	}
+}
+
+export function requestPlaylists(playlistType) {
+	return {
+		type: "REQUEST_PLAYLISTS",
+		playlistType
+	}
+}
+
+export function receivePlaylists(playlists) {
+	return {
+		type: "RECEIVE_PLAYLISTS",
+		playlists
 	}
 }

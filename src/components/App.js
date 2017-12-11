@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import AudioType from './AudioType';
 import MusicGenre from './MusicGenre';
-import PodcastType from './PodcastType'
+import PodcastType from './PodcastType';
+import SongsList from './SongsList';
 
 class App extends Component {
   render() {
@@ -19,7 +20,13 @@ class App extends Component {
   		return (
   			<PodcastType />
   		);
-  	} else {
+  	} else if (this.props.currentComponent === "song_list") {
+      return (
+        <SongsList />
+      )
+    } 
+
+    else {
   		return (
   			<AudioType />
   		)

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { prev, fetchSongs, showSongs,receiveSongs } from '../actions';
+import { prev, fetchSongs } from '../actions';
 
 class MusicGenre extends Component {
 
@@ -34,7 +34,6 @@ class MusicGenre extends Component {
 
 const mapActionsToProps = {
 	fetchSongs,
-	receiveSongs,
 	prev
 }
 
