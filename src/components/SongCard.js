@@ -7,9 +7,12 @@ class Song extends Component {
 		const song = this.props.song;
 
 		return(
-				<div className="songCard">
-					<div className="Title">{song.trackCensoredName}</div>
-					<div className="Artist">{song.artistName}</div>
+				<div className="SongCard">
+					<p>{song.trackCensoredName}</p>
+					<div className="Image">
+						<img src={song.artworkUrl100} alt="album artwork" />
+					</div>
+					<a href={song.previewUrl} target="_blank"><i className="fas fa-play-circle PlayIcon"></i></a>
 				</div>
 
 		);

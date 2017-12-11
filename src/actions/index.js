@@ -69,7 +69,7 @@ export function fetchPlaylists(playlistType) {
 		const state = getState();
 		var type = state.playlistType;
 
-		var url = "https://itunes.apple.com/search?entity=podcast&term=this+american+life";
+		var url = "https://itunes.apple.com/search?entity=podcast&term="+type;
 
 		$.getJSON(url, function(data) {
 			const playlists = data.results;

@@ -4,6 +4,7 @@ import AudioType from './AudioType';
 import MusicGenre from './MusicGenre';
 import PodcastType from './PodcastType';
 import SongsList from './SongsList';
+import PodcastList from './PodcastList';
 
 class App extends Component {
   render() {
@@ -23,10 +24,12 @@ class App extends Component {
   	} else if (this.props.currentComponent === "song_list") {
       return (
         <SongsList />
-      )
-    } 
-
-    else {
+      );
+    } else if (this.props.currentComponent === "podcast_picks") {
+      return (
+        <PodcastList />
+      );
+    } else {
   		return (
   			<AudioType />
   		)

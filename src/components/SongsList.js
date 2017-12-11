@@ -8,10 +8,10 @@ class SongsList extends Component {
 		console.log(this.props.songs);
 		return(
 			<div>
-				<h2>These are the songs for you</h2>
-				<ul>
+				<h2 className="ListHeading">Check out these songs:</h2>
+				<ul className="Wrapper">
 					{this.props.songs.map(song => 
-						<Song song={song} />
+						<Song key={song.trackId} song={song} />
 					)}
 				</ul>
 			</div>

@@ -39,7 +39,8 @@ export default function(state=INITIAL_STATE, action) {
 			});
 		case "RECEIVE_PLAYLISTS":
 			return Object.assign({}, state, {
-				playlists: action.playlists
+				playlists: action.playlists,
+				currentComponent: "podcast_picks"
 			});
 		case "PREV":
 			return Object.assign({}, state, {

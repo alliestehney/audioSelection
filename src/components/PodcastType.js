@@ -12,7 +12,7 @@ class PodcastType extends Component {
 				<h3>Select one category that interests you the most.</h3>
 				<ul>
 					<li><button type="button" value="sports" onClick={this.handleInputChange.bind(this)}>Sports</button></li>
-					<li><button type="button" value="currentEvents" onClick={this.handleInputChange.bind(this)}>Current Events</button></li>
+					<li><button type="button" value="current+events" onClick={this.handleInputChange.bind(this)}>Current Events</button></li>
 					<li><button type="button" value="history" onClick={this.handleInputChange.bind(this)}>History</button></li>
 					<li><button type="button" value="entrepreneurship" onClick={this.handleInputChange.bind(this)}>Entrepreneurship</button></li>
 				</ul>
